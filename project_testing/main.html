@@ -315,9 +315,7 @@ li{
     <body>
 
         <h1>File Open Visualization</h1>
-        
-         <!-<div id="cool"> </div>->
-        
+            
             <p>
 
             </p>
@@ -548,6 +546,8 @@ function hideItem(){
 
 d3.select(".tooltip").remove();
     d3.select(".tooltips").remove();
+        d3.select(".tooltips1").remove();
+
 
     //Define Tooltip here
 
@@ -605,6 +605,10 @@ d3.select(".tooltip").remove();
 }  
             
 function showItem(){
+    
+    d3.select(".tooltip").remove();
+    d3.select(".tooltips").remove();
+    
     var tooltip = d3.select("body").append("div")
     .attr("class", "tooltips1")
     .style("opacity", 0);
