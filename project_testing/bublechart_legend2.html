@@ -224,7 +224,7 @@
             .data(nodes)
             .enter()
             .append("circle")
-            .attr("r", function(d) { return d.radius; })
+            .attr("r", function(d) { return Math.round(d.radius); })
             .style("fill", function(d) { return color(d.email); })
             .on("mouseover", function (d) {
                             tooltip.transition()
@@ -232,7 +232,7 @@
                                 .style("opacity", 0.9);
                             tooltip.html( "<table>"
                                          +"<tr><td align='left'>Email</td><td align='center'>:<td align='right'>" + d.email + "</td></tr>"
-                                         +"<tr><td align='left'>Radius</td><td align='center'>:<td align='right'>" + d.radius + "</td></tr>"
+                                         +"<tr><td align='left'>Radius</td><td align='center'>:<td align='right'>" + Math.round(d.radius) + "</td></tr>"
                                          + "</table>")
                                 .style("left", (d3.event.pageX + 5) + "px")
                                 .style("top", (d3.event.pageY - 28) + "px");
