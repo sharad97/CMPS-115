@@ -60,7 +60,7 @@
                 text += possible.charAt(Math.floor(Math.random() * possible.length));
             }
             var i = Math.floor(Math.random() * m);
-            var j = text + "@" + text;
+            var j = text + "@" + text +".com";
             var o = j.replace(/.*@/, "");
             var r = Math.sqrt((i + 1) / m * -Math.log(Math.random())) * maxRadius;
             var d = {cluster: o, radius: r, email: j};
